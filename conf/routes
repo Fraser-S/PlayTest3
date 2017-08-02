@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Files
+GET     /recieveFile                controllers.Application.sendFile
+GET     /recieveLargeFile           controllers.Application.sendLargeFile
+
+# Chucked
+GET     /chunckedString             controllers.Application.chuckedString
+
+# Comet
+GET     /comet                      controllers.Application.index
+GET     /comet/string               controllers.Application.cometString
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
